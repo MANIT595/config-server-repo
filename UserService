@@ -1,0 +1,24 @@
+
+spring.datasource.url=jdbc:mysql://localhost:3306/microservices
+spring.datasource.username=root
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
+
+
+logging.file.name=user_service.logs
+logging.level.root = info
+
+management.endpoints.web.exposure.include=*
+management.info.env.enabled=true
+
+management.endpoint.shutdown.enabled=true
+
+#to add info to info actuator endpoint
+info.app.name=SpringBoot User Service
+info.app.description= User Microserice to perform CRUD operations on User Resource
+info.app.version =1.0v
+
+#to add health actuator endpoint
+management.endpoint.health.show-details=always
+
+eureka.instance.client.serverUrl.defaultZone = http://localhost:8761/eureka/
